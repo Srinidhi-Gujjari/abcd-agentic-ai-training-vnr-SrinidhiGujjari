@@ -62,8 +62,41 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
    - **Tabs:** Insert Data, Summarize Sheet, Ask a Question.  
    - **Input:** Google Sheet URL.  
    - **Output:** Column information, insertion results, AI summaries, and answers.
+
+### Setup
+   Follow these steps to set up and run the Dynamic Google Sheets Assistant:
+
+   **Step1**:Create Project Folder
+   
+   - Create a folder and navigate into it:  
+           `mkdir sheet-ai-assistant`  
+           `cd sheet-ai-assistant`  
+   - Copy your `main.py` into this folder.
+      
+   **Step-2:** Create and Activate Virtual Environment 
+   
+   - Windows: `python -m venv venv` then `venv\Scripts\activate`
+   - macOS/Linux: `python -m venv venv` then `source venv/bin/activate`
+      
+   **Step-3:** Install Dependencies
+   
+         ```bash
+         pip install python-dotenv gradio pandas gspread oauth2client langchain-google-genai
+   
+   **Step-4:** Add Configuration Files
+   - .env file (in the same folder as main.py):
+         
+                  GOOGLE_API_KEY=your_gemini_api_key_here
+   - credentials.json (Google Service Account JSON key):
+            Download from Google Cloud Console Save in the same folder as main.py
+            Enable Google Sheets API and Google Drive API in your project
+            Share your Google Sheet with the service account email and give Editor access
+         
+   **Step-5:** Run the Application
+   
+            python main.py
      
-## Real-Time Use Cases
+### Real-Time Use Cases
 
 - **Business Analytics:** Quickly summarize sales, inventory, or customer data in Google Sheets.  
 - **Data Validation:** Ensure correct data types while inserting new entries.  

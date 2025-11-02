@@ -1,7 +1,6 @@
-# Dynamic Google Sheets Assistant
+# Google Sheets Assistant
 
-This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio, and LangChain with Google Gemini API integration. It allows users to interact with Google Sheets in a web interface to perform tasks like viewing column names, inserting data, summarizing sheet data, and asking questions based on the data.
-
+This project is a **Google Sheets Assistant** built using Python, Gradio, and LangChain with Google Gemini API integration. It allows users to interact with Google Sheets in a web interface to perform tasks like viewing column names, inserting data, summarizing sheet data, and asking questions based on the data.
 
 ## Features
 
@@ -10,7 +9,6 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
 - **Summarize Sheet Data:** Generates a clear summary of the sheet data using an LLM (Google Gemini).  
 - **Ask Questions:** Users can ask questions related to the data, and the system provides intelligent answers using LLM.  
 - **Interactive Web Interface:** Gradio-based interface with tabs for easy navigation.
-
 
 ## Libraries Used
 
@@ -29,7 +27,9 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
    - **Insert Data:** View columns and insert validated row data.  
    - **Summarize Sheet:** Get a summary of the sheet content.  
    - **Ask a Question:** Ask any question based on the sheet data.  
+## Flow Diagram
 
+<img width="1020" height="947" alt="flow" src="https://github.com/user-attachments/assets/067cbc5d-2a52-4907-9b62-38132c3da028" />
 
 ## Architecture & Details
 
@@ -41,7 +41,8 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
 - **Backend (Python + LangChain + Google APIs):** Handles data validation, communicates with Google Sheets, and performs AI-based summarization and question answering using LangChain with Google Gemini.  
 - **Google Sheets:** Stores all spreadsheet data, column information, and user entries.  
 - **LangChain + Google Gemini:** Serves as the LLM responsible for generating summaries and answering questions based on the sheet data.  
-
+**Architecture Diagram:**
+<img width="1024" height="1024" alt="googleSheets_architecture" src="https://github.com/user-attachments/assets/b7406b44-632c-4f87-aaef-c5801982c60f" />
 
 ### Low-Level Details
 
@@ -68,9 +69,10 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
 
    **Step1**:Create Project Folder
    
-   - Create a folder and navigate into it:  
-           `mkdir sheet-ai-assistant`  
-           `cd sheet-ai-assistant`  
+   - Create a folder and navigate into it:
+
+           mkdir googleSheet-assistant 
+           cd googleSheet-assistant
    - Copy your `main.py` into this folder.
       
    **Step-2:** Create and Activate Virtual Environment 
@@ -80,24 +82,43 @@ This project is a **Dynamic Google Sheets Assistant** built using Python, Gradio
       
    **Step-3:** Install Dependencies
    
-         ```bash
          pip install python-dotenv gradio pandas gspread oauth2client langchain-google-genai
    
-   **Step-4:** Add Configuration Files
-   - .env file (in the same folder as main.py):
+   **Step-4:** Set Up Google Sheets API
+   
+   - Go to Google Cloud Console → Create a project.
+   - Enable Google Sheets API.
+   - Create a Service Account and download the JSON key file (credentials.json).
+   - Place credentials.json in the same folder as main.py.
+   - Share your Google Sheet with the Service Account email to allow read/write access.
+
+   **Step-5:** Set Up Google Gemini API Key
+   - Create a .env file in the same folder as main.py:
+
+           GOOGLE_API_KEY=YOUR_GOOGLE_GEMINI_API_KEY
+   - Replace YOUR_GOOGLE_GEMINI_API_KEY with your actual API key.
          
-                  GOOGLE_API_KEY=your_gemini_api_key_here
-   - credentials.json (Google Service Account JSON key):
-            Download from Google Cloud Console Save in the same folder as main.py
-            Enable Google Sheets API and Google Drive API in your project
-            Share your Google Sheet with the service account email and give Editor access
-         
-   **Step-5:** Run the Application
+   **Step-6:** Run the Application
    
             python main.py
+   - Gradio will start a local web server.
+   - It will display a URL in the terminal, like:
+
+         Running on local URL:  http://127.0.0.1:7860
+   - Open this URL in your browser to access the Dynamic Google Sheets Assistant.
      
 ### Real-Time Use Cases
 
 - **Business Analytics:** Quickly summarize sales, inventory, or customer data in Google Sheets.  
 - **Data Validation:** Ensure correct data types while inserting new entries.  
 - **AI-Powered Insights:** Generate summaries and answers from spreadsheet data without manual calculations.
+  
+### Future Scope:
+- Multi-Sheet Support : Extend the tool to handle multiple sheets in a single Google Spreadsheet for better data management.
+- Data Visualization : Automatically generate charts (bar, line, pie) from sheet data for quick insights.
+- Voice Interaction : Enable users to ask questions and insert data using speech commands.
+- Cloud Deployment & Export : Deploy on cloud platforms for remote access and allow export of summaries in PDF or Excel.
+
+### 📊 PPT Link:
+### 🎥 Video Link:
+  

@@ -29,7 +29,7 @@ This project is a **Google Sheets Assistant** built using Python, Gradio, and La
    - **Ask a Question:** Ask any question based on the sheet data.  
 ## Flow Diagram
 
-<img width="1020" height="947" alt="flow" src="https://github.com/user-attachments/assets/067cbc5d-2a52-4907-9b62-38132c3da028" />
+<img width="900" height="900" alt="flow" src="https://github.com/user-attachments/assets/067cbc5d-2a52-4907-9b62-38132c3da028" />
 
 ## Architecture & Details
 
@@ -42,7 +42,7 @@ This project is a **Google Sheets Assistant** built using Python, Gradio, and La
 - **Google Sheets:** Stores all spreadsheet data, column information, and user entries.  
 - **LangChain + Google Gemini:** Serves as the LLM responsible for generating summaries and answering questions based on the sheet data.  
 **Architecture Diagram:**
-<img width="1024" height="1024" alt="googleSheets_architecture" src="https://github.com/user-attachments/assets/b7406b44-632c-4f87-aaef-c5801982c60f" />
+<img width="900" height="900" alt="googleSheets_architecture" src="https://github.com/user-attachments/assets/b7406b44-632c-4f87-aaef-c5801982c60f" />
 
 ### Low-Level Details
 
@@ -119,6 +119,8 @@ This project is a **Google Sheets Assistant** built using Python, Gradio, and La
 - Voice Interaction : Enable users to ask questions and insert data using speech commands.
 - Cloud Deployment & Export : Deploy on cloud platforms for remote access and allow export of summaries in PDF or Excel.
 
-### 📊 PPT Link:
-### 🎥 Video Link:
+### PPT Link : 
+   https://docs.google.com/presentation/d/1ilBQXU9LOyTWz_0ioni46LMRKBQxjf8c/edit?usp=sharing&ouid=112554400976286662374&rtpof=true&sd=true
+### Video Link : 
+   https://drive.google.com/file/d/194z-83gzZqmk2lRqAvqSF1z2U_uo5oLE/view?usp=sharing
   

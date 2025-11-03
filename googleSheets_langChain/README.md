@@ -105,7 +105,7 @@ This project is a **Google Sheets Assistant** built using Python, Gradio, and La
    - It will display a URL in the terminal, like:
 
          Running on local URL:  http://127.0.0.1:7860
-   - Open this URL in your browser to access the Dynamic Google Sheets Assistant.
+   - Open this URL in your browser to access the Google Sheets Assistant.
      
 ### Real-Time Use Cases
 
